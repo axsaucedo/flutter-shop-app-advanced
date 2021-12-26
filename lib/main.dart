@@ -1,8 +1,10 @@
 import "package:flutter/material.dart";
-import "package:flutter/provider.dart"
+import "package:provider/provider.dart";
 
 import "./screens/products_overview_screen.dart";
-import "./providers/product.dart";
+// import "./providers/product.dart";
+
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
@@ -13,8 +15,13 @@ class MyApp extends StatelessWidget {
         title: "MyShop",
         theme: ThemeData(
           primarySwatch: Colors.purple,
-          colorScheme:
+          accentColor: Colors.deepOrange,
+          fontFamily: "Lato",
         ),
+        home: ProductsOverviewScreen(),
+        routes: {
+
+        }
       )
     );
   }
